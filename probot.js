@@ -350,12 +350,12 @@ message.channel.sendFile(canvas.toBuffer());
 client.on('message', message => {
   if(message.content.startsWith(`${prefix}invite`)){
     var embed = new Discord.RichEmbed()
-    .setTitle(">> ClickHere To Add" + `${client.user.username}` + " <<")
-    .setURL("https://discordapp.com/oauth2/authorize?client_id=" + `${client.user.id}` + "&scope=bot&permissions=2080374975")
+    .setTitle(">> لا يوجد انفيت للبوت انه بوت خاص" + `${client.user.username}` + " <<")
+    .setURL("" + `${client.user.id}` + "')
     .setTimestamp()
     .setFooter(`Requested By | ${message.author.username}`)
     .setColor("RANDOM")
-    message.channel.send(":white_check_mark: | Check Your DM! تم الأرسال بلخاص")
+    message.channel.send(":white_check_mark: | هذا بوت خاص")
     message.author.send({embed})
   }
 });
@@ -1147,7 +1147,7 @@ client.on('message', async message =>{
   var args = message.content.split(" ").slice(1);
     if(command == "mute") {
       let tomute = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
-      if(!tomute) return message.reply(":information_source: `#mute @OrochiX` يجب تحديد شخص ") .then(m => m.delete(5000));
+      if(!tomute) return message.reply(":information_source: `#mute @Medo` يجب تحديد شخص ") .then(m => m.delete(5000));
       if(tomute.hasPermission("MANAGE_MESSAGES"))return      message.channel.send('**I Dont Have Permission** `MANAGE_MASSAGEES`');
       let muterole = message.guild.roles.find(`name`, "Muted");
   
@@ -1381,7 +1381,7 @@ client.on('message', message => {
   let embed = new Discord.RichEmbed()
 .setAuthor(message.author.username)
 .setColor("#9B59B6")
-.addField(" ** :gear: Server Support :gear: **" , "  **https://discord.gg/hcR4MU**")
+.addField(" ** :gear: Server Support :gear: **" , "  **كلم MeDo#2002 للمساعده**")
   
   
 message.channel.sendEmbed(embed);
@@ -1418,17 +1418,10 @@ client.on('message', message => {
 
 message.author.sendMessage(`
 **
-╭━━━╮╱╱╱╱╭━━╮╱╱╱╭╮
-┃╭━╮┃╱╱╱╱┃╭╮┃╱╱╭╯╰╮
-┃╰━╯┣━┳━━┫╰╯╰┳━┻╮╭╯
-┃╭━━┫╭┫╭╮┃╭━╮┃╭╮┃┃
-┃┃╱╱┃┃┃╰╯┃╰━╯┃╰╯┃╰╮
-╰╯╱╱╰╯╰━━┻━━━┻━━┻━╯
 
 [❖═════ لتشغيل اللوق Log يجب وجود روم باسم ═══════❖]
 
 [❖═════════════════════════════❖]
-        لماذا بروبوت ؟
 1- :rocket: سرعه اتصال ممتازه
 2- :beginner: سهل الاستخدام
 3- :warning: صيانه يوميه
@@ -1519,9 +1512,7 @@ message.author.sendMessage(`
 
 اخرى 
 
-#support رابط سيرفر الدعم الفني
-
-#invite رابط اضافة البوت
+#support كلم MeDo#2002
 
 #ping لمعرفه سرعه اتصال البوت
 
